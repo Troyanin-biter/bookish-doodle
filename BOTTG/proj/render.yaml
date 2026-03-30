@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: reminder-opus-bot
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DB_PATH
+        value: data/productivity.db
+
